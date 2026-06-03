@@ -74,7 +74,9 @@ def tampilkan():
     )
             
 # UPDATE 5
+
 def update():
+
     try:
         index = listbox.curselection()[0]
         data_barang[index].id_barang = entry_id.get()
@@ -93,43 +95,48 @@ def update():
         )
 
 # DELETE 6
- def hapus():
-     try:
-         index = listbox.curselection()[0]
-         nama = data_barang[index].nama
-         data_barang.pop(index)
-         riwayat.append(f"Hapus {nama}")
+def hapus():
 
-         tampilkan()
+    try:
+        index = listbox.curselection()[0]
+        nama = data_barang[index].nama
+        data_barang.pop(index)
+        riwayat.append(f"Hapus {nama}")
 
-         clear_entry()
+        tampilkan()
 
-     except:
-         messagebox.showerror(
-             "Error",
-             "Pilih data terlebih dahulu"
-         )
+        clear_entry()
+
+    except:
+        messagebox.showerror(
+            "Error",
+            "Pilih data terlebih dahulu"
+        )
 
 # SEARCHING 7
-  def cari():
-      keyword = entry_cari.get().lower()
-      listbox.delete(0, END)
-      
-      for barang in data_barang:
-          if (
-              keyword in barang.id_barang.lower()
-              or
-              keyword in barang.nama.lower()
-          ):
 
-              listbox.insert(
-                  END,
-                  f"ID: {barang.id_barang} | "
-                  f"Nama: {barang.nama} | "
-                  f"Stok: {barang.stok}"
-              )
+def cari():
+
+    keyword = entry_cari.get().lower()
+    
+    listbox.delete(0, END)
+      
+    for barang in data_barang:
+        if (
+            keyword in barang.id_barang.lower()
+            or
+            keyword in barang.nama.lower()
+        ):
+
+            listbox.insert(
+                END,
+                f"ID: {barang.id_barang} | "
+                f"Nama: {barang.nama} | "
+                f"Stok: {barang.stok}"
+            )
 # SORTING 8
 def sorting():
+
     n = len(data_barang)
 
     for i in range(n):
