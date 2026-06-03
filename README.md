@@ -7,7 +7,7 @@ from tkinter import messagebox
 # COLECTION FRAMEWORK 1
 
 data_barang = [] #list
-riawayat = [] #stack
+riwayat = [] #stack
 antrian = [] #Queue
 kategori_set = set() #set
 barang_dict = {} #dictionary
@@ -16,9 +16,9 @@ barang_dict = {} #dictionary
 
 class Barang:
      def __init__(self,id_barang,nama,stok):
-     self.id_barang = id_barang
-     self.nama = nama 
-     self.stok = stok
+          self.id_barang = id_barang
+          self.nama = nama 
+          self.stok = stok
 
 # CREATE 3
 
@@ -172,7 +172,7 @@ def pilih(event):
           )
 
           entry_nama.insert(
-               0.
+               0,
                data_barang[index].nama
           )
 
@@ -198,7 +198,7 @@ root = Tk()
 
 root.title("SmartStock Gudang")
 
-root.geometry(500x500)
+root.geometry("500x500")
 
 # FORM 12
 
@@ -214,8 +214,8 @@ entry_nama.pack()
 
 Label(root, text="Stok").pack()
 
-entry_stock = Entry(root)
-entry_stock.pack()
+entry_stok = Entry(root)
+entry_stok.pack()
 
 # BUTTON 13
 
