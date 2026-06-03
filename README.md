@@ -216,3 +216,58 @@ Label(root, text="Stok").pack()
 
 entry_stock = Entry(root)
 entry_stock.pack()
+
+# BUTTON 13
+
+Button(
+     root,
+     text="Tambah",
+     command=tambah
+) .pack(pady=2)
+
+Button(
+     root,
+     text="Update",
+     command=update
+) .pack(pady=2)
+
+# SEARCH 14
+
+Label(root, text="Cari ID / Nama Barang").pack()
+
+entry_cari = Entry(root)
+entry_cari.pack()
+
+Button(
+     root,
+     text="Cari",
+     command=cari
+).pack(pady=2)
+
+# SORTING
+
+Button(
+     root,
+     text="Sorting ID",
+     command=sorting
+).pack(pady=2)
+
+# LISTBOX
+
+listbox = Listbox (
+     root,
+     width=60
+)
+
+listbox.pack(pady=10)
+
+listbox.bind(
+     "<<ListboxSelect>>",
+     pilih
+)
+
+# RUN
+
+root.mainloop()
+
+     
