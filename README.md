@@ -146,7 +146,7 @@ def sorting():
         for j in range(0, n - i - 1):
             if (
                 data_barang[j].id_barang >
-                data_barang{j + 1].id_barang
+                data_barang[j + 1].id_barang
             ):
                 data_barang[j], data_barang[j + 1] = (
                     data_barang[j + 1],
