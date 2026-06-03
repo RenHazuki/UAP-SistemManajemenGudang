@@ -1,6 +1,9 @@
 # UAP-SistemManajemenGudang
 # Kelompok 4 UAP
 
+from tkinter import *
+from tkinter import messagebox
+
 # COLECTION FRAMEWORK 1
 
 data_barang = [] #list
@@ -150,9 +153,66 @@ def sorting():
                     data_barang[j]
                 )
     tampilkan()
-      
- 
-    
 
+# PILIH DATA 9
 
+def pilih(event):
 
+     try:
+
+          index = listbox.curselection()[0]
+
+          entry_id.delete(0, END)
+          entry_nama.delete(0, END)
+          entry_stok.delete(0, END)
+
+          entry_id.insert(
+               0,
+               data_barang[index].id_barang
+          )
+
+          entry_nama.insert(
+               0.
+               data_barang[index].nama
+          )
+
+          entry_stok.insert(
+               0,
+               data_barang[index].stok
+          )
+
+     except:
+          pass
+
+# CLEAR ENTRY 10
+
+def clear_entry():
+
+     entry_id.delete(0, END)
+     entry_nama.delete(0, END)
+     entry_stok.delete(0, END)
+
+# GUI 11
+
+root = Tk()
+
+root.title("SmartStock Gudang")
+
+root.geometry(500x500)
+
+# FORM 12
+
+Label(root, text="ID Barang").pack()
+
+entry_id = Entry(root)
+entry_id.pack()
+
+Label(root, text="Nama Barang").pack()
+
+entry_nama = Entry(root)
+entry_nama.pack()
+
+Label(root, text="Stok").pack()
+
+entry_stock = Entry(root)
+entry_stock.pack()
