@@ -244,7 +244,7 @@ Button(
      command=cari
 ).pack(pady=2)
 
-# SORTING
+# SORTING 15
 
 Button(
      root,
@@ -252,7 +252,7 @@ Button(
      command=sorting
 ).pack(pady=2)
 
-# LISTBOX
+# LISTBOX 16
 
 listbox = Listbox (
      root,
