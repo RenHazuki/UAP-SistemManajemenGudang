@@ -30,7 +30,7 @@ def tambah():
 
     if id_barang == "" or nama == "" or stok == "":
         messagebox.showerror(
-           "error"
+           "error",
            "data tidak boleh kosong"
         )
         return
@@ -230,6 +230,12 @@ Button(
      text="Update",
      command=update
 ) .pack(pady=2)
+
+Button(
+     root,
+     text="Hapus",
+     command=hapus
+).pack(pady=2)
 
 # SEARCH 14
 
